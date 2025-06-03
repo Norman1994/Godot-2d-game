@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwotpkolbqa62"]
+
+[ext_resource type="Script" uid="uid://d2hit6cvnq0sr" path="res://in_game_menu.gd" id="1_ioadw"]
+
+[node name="InGameMenu" type="CanvasLayer"]
+script = ExtResource("1_ioadw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -33.0
+offset_right = 55.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ContineButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Продолжить"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Выход"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
