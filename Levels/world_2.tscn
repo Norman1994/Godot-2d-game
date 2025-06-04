@@ -288,7 +288,7 @@ layer_1/name = "Layer1"
 
 [node name="ExitDoor" parent="." instance=ExtResource("3_ia432")]
 position = Vector2(772, 417)
-next_scene = "res://world.tscn"
+next_scene = "res://Levels/world.tscn"
 
 [node name="Player" parent="." instance=ExtResource("1_3m1hs")]
 position = Vector2(519, 392)

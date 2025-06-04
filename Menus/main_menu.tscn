@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bpb57waeqwt0r"]
 
-[ext_resource type="Script" uid="uid://dghile04mxmcc" path="res://Scripts/main_menu.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dghile04mxmcc" path="res://Scripts/main_menu.gd" id="1_jf8mj"]
 
 [node name="MainMenu" type="CanvasLayer"]
-script = ExtResource("1_06t4h")
+script = ExtResource("1_jf8mj")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 8

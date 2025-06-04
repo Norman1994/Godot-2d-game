@@ -25,6 +25,9 @@ func _physics_process(delta: float) -> void:
 
 	update_animation()
 	move_and_slide()
+	
+	if position.y > 650:
+		on_death()
 
 func update_animation():
 	if velocity.x < 0:
@@ -41,3 +44,7 @@ func update_animation():
 		animated_sprite_2d.play("Jump")
 	elif velocity.y > 0: #если падение
 		animated_sprite_2d.play("Fall")
+
+func on_death():
+	self.queue_free()
+	$"../CanvasLayer/DeathScreen".visible = true
