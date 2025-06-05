@@ -48,3 +48,9 @@ func update_animation():
 func on_death():
 	self.queue_free()
 	$"../CanvasLayer/DeathScreen".visible = true
+
+
+func _on_pickup_area_area_entered(area: Area2D) -> void:
+	if area.has_method("on_pickup"):
+		area.on_pickup(self)
+		$TakeItem.play()

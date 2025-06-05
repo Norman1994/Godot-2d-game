@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://v2oh70f8wh7x"]
+[gd_scene load_steps=56 format=3 uid="uid://v2oh70f8wh7x"]
 
 [ext_resource type="Script" uid="uid://crk22pj8vor0h" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://bbweabkykj2n5" path="res://res/Main Characters/Pink Man/Idle (32x32).png" id="2_4ntmi"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://37yprkuvq4cs" path="res://res/Main Characters/Pink Man/Jump (32x32).png" id="6_apopc"]
 [ext_resource type="Texture2D" uid="uid://c0b4n3shcq0pc" path="res://res/Main Characters/Pink Man/Run (32x32).png" id="7_5htga"]
 [ext_resource type="Texture2D" uid="uid://dgnq3cs1ds54n" path="res://res/Main Characters/Pink Man/Wall Jump (32x32).png" id="8_p5o4e"]
+[ext_resource type="AudioStream" uid="uid://bp7bhmjxw264g" path="res://Sounds/blop1.mp3" id="9_00tjw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btcbx"]
 
@@ -350,6 +351,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_od3ui"]
+radius = 16.1245
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 18
 script = ExtResource("1_l8h54")
@@ -363,3 +367,14 @@ sprite_frames = SubResource("SpriteFrames_gu6f8")
 animation = &"WallJump"
 frame = 4
 frame_progress = 0.24576
+
+[node name="PickupArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+shape = SubResource("CircleShape2D_od3ui")
+
+[node name="TakeItem" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_00tjw")
+volume_db = 3.748
+
+[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
