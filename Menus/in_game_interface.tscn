@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnr7j53liu52r"]
+
+[ext_resource type="Script" uid="uid://dgpsle3j8afby" path="res://Menus/in_game_interface.gd" id="1_u7ie1"]
+
+[node name="InGameInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7ie1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -222.0
+offset_top = 1.0
+offset_right = -170.0
+offset_bottom = 41.0
+grow_horizontal = 0
+
+[node name="Score" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Очки: "
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 1.0
+offset_right = -56.0
+offset_bottom = 41.0
+grow_horizontal = 0
+
+[node name="HiScore" type="Label" parent="MarginContainer2"]
+layout_mode = 2
+text = "Рекорд:"

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://37yprkuvq4cs" path="res://res/Main Characters/Pink Man/Jump (32x32).png" id="6_apopc"]
 [ext_resource type="Texture2D" uid="uid://c0b4n3shcq0pc" path="res://res/Main Characters/Pink Man/Run (32x32).png" id="7_5htga"]
 [ext_resource type="Texture2D" uid="uid://dgnq3cs1ds54n" path="res://res/Main Characters/Pink Man/Wall Jump (32x32).png" id="8_p5o4e"]
-[ext_resource type="AudioStream" uid="uid://bp7bhmjxw264g" path="res://Sounds/blop1.mp3" id="9_00tjw"]
+[ext_resource type="AudioStream" uid="uid://fe6883jco3tv" path="res://Sounds/GachiSounds/huh.mp3" id="9_00tjw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btcbx"]
 
@@ -376,5 +376,7 @@ shape = SubResource("CircleShape2D_od3ui")
 [node name="TakeItem" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_00tjw")
 volume_db = 3.748
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]

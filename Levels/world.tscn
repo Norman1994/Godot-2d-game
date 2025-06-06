@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://kl66wt1lss3k"]
+[gd_scene load_steps=11 format=3 uid="uid://kl66wt1lss3k"]
 
 [ext_resource type="Texture2D" uid="uid://c7kfcwwhac608" path="res://res/Terrain/Terrain (16x16).png" id="1_4dvsh"]
 [ext_resource type="PackedScene" uid="uid://gwjfosvah4mn" path="res://Menus/death_screen.tscn" id="1_x5oxt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://v2oh70f8wh7x" path="res://Player/player.tscn" id="3_x5oxt"]
 [ext_resource type="PackedScene" uid="uid://c5nfw87mlyrpw" path="res://Menus/pause_menu.tscn" id="4_vqnaq"]
 [ext_resource type="PackedScene" uid="uid://cldl1obim3ml8" path="res://Traps/Spikes/spikes.tscn" id="5_ks8n1"]
+[ext_resource type="PackedScene" uid="uid://dnr7j53liu52r" path="res://Menus/in_game_interface.tscn" id="6_rljl1"]
 [ext_resource type="PackedScene" uid="uid://cbveho785bj42" path="res://Items/strawberry.tscn" id="7_vqnaq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
@@ -303,6 +304,8 @@ next_scene = "res://Levels/world_2.tscn"
 position = Vector2(525, 330)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InGameInterface" parent="CanvasLayer" instance=ExtResource("6_rljl1")]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_vqnaq")]
 visible = false

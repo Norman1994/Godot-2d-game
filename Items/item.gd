@@ -8,6 +8,7 @@ func _process(delta: float) -> void:
 	pass
 
 func on_pickup(body):
-	#$Sound.play()
-	#await $Sound.finished
+	GlobalVars.score += 1
+	if (GlobalVars.score > GlobalVars.hi_score):
+		GlobalVars.hi_score = GlobalVars.score
 	get_tree().queue_delete(self)
