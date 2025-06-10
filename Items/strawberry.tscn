@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://b0lm4n4irqt8o" path="res://res/Items/Fruits/Strawberry.png" id="1_pj5qe"]
 [ext_resource type="Script" uid="uid://c4vokdeuspxrt" path="res://Items/item.gd" id="1_wat8j"]
-[ext_resource type="AudioStream" uid="uid://bp7bhmjxw264g" path="res://Sounds/blop1.mp3" id="3_aolof"]
+[ext_resource type="AudioStream" uid="uid://fe6883jco3tv" path="res://Sounds/GachiSounds/huh.mp3" id="3_wat8j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uysx6"]
-radius = 5.09902
+radius = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wat8j"]
 atlas = ExtResource("1_pj5qe")
@@ -144,8 +144,8 @@ shape = SubResource("CircleShape2D_uysx6")
 sprite_frames = SubResource("SpriteFrames_eeqj6")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.888477
+frame = 1
 
-[node name="Sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_aolof")
+[node name="TakeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wat8j")
 volume_db = 8.432
