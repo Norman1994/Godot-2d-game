@@ -378,5 +378,12 @@ stream = ExtResource("9_00tjw")
 volume_db = 3.748
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 25.0
 
 [connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]

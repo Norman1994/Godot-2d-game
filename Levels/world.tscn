@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://kl66wt1lss3k"]
+[gd_scene load_steps=12 format=3 uid="uid://kl66wt1lss3k"]
 
 [ext_resource type="Texture2D" uid="uid://c7kfcwwhac608" path="res://res/Terrain/Terrain (16x16).png" id="1_4dvsh"]
 [ext_resource type="PackedScene" uid="uid://gwjfosvah4mn" path="res://Menus/death_screen.tscn" id="1_x5oxt"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cldl1obim3ml8" path="res://Traps/Spikes/spikes.tscn" id="5_ks8n1"]
 [ext_resource type="PackedScene" uid="uid://dnr7j53liu52r" path="res://Menus/in_game_interface.tscn" id="6_rljl1"]
 [ext_resource type="PackedScene" uid="uid://cbveho785bj42" path="res://Items/strawberry.tscn" id="7_vqnaq"]
+[ext_resource type="PackedScene" uid="uid://3htxuacvkxng" path="res://Items/orange.tscn" id="9_06jdw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
 texture = ExtResource("1_4dvsh")
@@ -324,3 +325,15 @@ scale = Vector2(1.9274, 1.83394)
 [node name="Strawberry2" parent="." instance=ExtResource("7_vqnaq")]
 position = Vector2(107, 406)
 scale = Vector2(1.9274, 1.83394)
+
+[node name="Strawberry3" parent="." instance=ExtResource("9_06jdw")]
+position = Vector2(1057, 420)
+points = 2
+
+[node name="Strawberry4" parent="." instance=ExtResource("9_06jdw")]
+position = Vector2(1114, 418)
+points = 2
+
+[node name="Strawberry5" parent="." instance=ExtResource("9_06jdw")]
+position = Vector2(806, 501)
+points = 2

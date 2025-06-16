@@ -33,6 +33,10 @@ text = "Выход"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_hmrkc")
+volume_db = 2.971
+
+[node name="DeathScream" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hmrkc")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
