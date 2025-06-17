@@ -31,6 +31,16 @@ func on_pickup(body):
 
 	await tween_one.finished
 	await tween_two.finished
+	
+	match type:
+		type_enum.ITEM_FRUIT:
+			pass
+		type_enum.ITEM_KEY:
+			body.has_key = true
+			print_debug(body.has_key)
+		type_enum.ITEM_BONUS:
+			pass
+	
 	queue_free()
 	
 	

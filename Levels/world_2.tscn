@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d03laefjolx6u"]
+[gd_scene load_steps=11 format=3 uid="uid://d03laefjolx6u"]
 
 [ext_resource type="PackedScene" uid="uid://v2oh70f8wh7x" path="res://Player/player.tscn" id="1_3m1hs"]
 [ext_resource type="Texture2D" uid="uid://c7kfcwwhac608" path="res://res/Terrain/Terrain (16x16).png" id="2_ia432"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5nfw87mlyrpw" path="res://Menus/pause_menu.tscn" id="5_3dj27"]
 [ext_resource type="PackedScene" uid="uid://gwjfosvah4mn" path="res://Menus/death_screen.tscn" id="6_s7ts3"]
 [ext_resource type="PackedScene" uid="uid://cbveho785bj42" path="res://Items/strawberry.tscn" id="7_3dj27"]
+[ext_resource type="PackedScene" uid="uid://d4gh26n7wuj11" path="res://Items/key.tscn" id="8_s7ts3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hlada"]
 texture = ExtResource("2_ia432")
@@ -292,7 +293,8 @@ layer_1/name = "Layer1"
 
 [node name="ExitDoor" parent="." instance=ExtResource("3_ia432")]
 position = Vector2(772, 417)
-next_scene = "res://Levels/world.tscn"
+next_scene = "res://Levels/world_3.tscn"
+need_key = true
 
 [node name="Player" parent="." instance=ExtResource("1_3m1hs")]
 position = Vector2(645, 437)
@@ -328,3 +330,7 @@ scale = Vector2(1.93629, 1.65293)
 [node name="Strawberry3" parent="." instance=ExtResource("7_3dj27")]
 position = Vector2(241, 390)
 scale = Vector2(1.93629, 1.65293)
+
+[node name="Key" parent="." instance=ExtResource("8_s7ts3")]
+position = Vector2(198, 390)
+type = 1

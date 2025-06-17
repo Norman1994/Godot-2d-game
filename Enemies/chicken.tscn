@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ux7rpkcrtk87"]
+
+[node name="Chicken" type="CharacterBody2D"]
