@@ -1,6 +1,6 @@
 extends Area2D
 
-enum type_enum {ITEM_FRUIT, ITEM_KEY, ITEM_BONUS}
+enum type_enum {ITEM_FRUIT, ITEM_KEY, ITEM_BONUS, ITEM_JUMP}
 
 var isTaken:bool = false
 @export var points : int = 1
@@ -40,6 +40,8 @@ func on_pickup(body):
 			print_debug(body.has_key)
 		type_enum.ITEM_BONUS:
 			pass
+		type_enum.ITEM_JUMP:
+			body.has_double_jump = true
 	
 	queue_free()
 	

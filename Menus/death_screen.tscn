@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://d1r4e4sqkbuix" path="res://Sounds/GachiSounds/death.mp3" id="2_hmrkc"]
 
 [node name="DeathScreen" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_tjgec")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

@@ -39,6 +39,15 @@ size_flags_vertical = 4
 layout_mode = 2
 text = "Продолжить"
 
+[node name="Save" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Сохранить"
+
+[node name="Load" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Загрузить
+"
+
 [node name="Exit" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Выход"
@@ -46,4 +55,6 @@ text = "Выход"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

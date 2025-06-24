@@ -367,3 +367,6 @@ scale = Vector2(-2.14593, 2.72838)
 
 [node name="Chicken2" parent="." instance=ExtResource("10_plh8v")]
 position = Vector2(470, 355)
+
+[node name="Chicken3" parent="." instance=ExtResource("10_plh8v")]
+position = Vector2(647, 371)

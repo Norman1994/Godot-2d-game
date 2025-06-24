@@ -8,6 +8,7 @@ var can_turn := true
 var spawn_position : Vector2
 
 func _ready() -> void:
+	add_to_group("Enemy")
 	velocity = Vector2.ZERO
 	spawn_position = position
 	if randf() < 0.5:
