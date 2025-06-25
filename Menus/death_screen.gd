@@ -7,12 +7,10 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if visible and not played_death_sound:
-		get_tree().paused = true
+		if not get_tree().paused:
+			get_tree().paused = true
 		death_sound()
 		played_death_sound = true
-	elif not visible:
-		get_tree().paused = false
-		played_death_sound = false
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false

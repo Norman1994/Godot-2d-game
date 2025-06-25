@@ -2,23 +2,22 @@ extends Control
 
 func _ready():
 	visible = false
+	get_tree().paused = false
 	
 func resume():
 	get_tree().paused = false
-	print_debug("А вот здесь ", get_tree().paused)
 	visible = false
 	
 func pause():
 	visible = true
 	get_tree().paused = true
-	print_debug("А тут ", get_tree().paused)
+	print_debug("Тут ", get_tree().paused)
+	
 	
 func testEsc():
-	if Input.is_action_just_pressed("exit") and get_tree().paused == false:
-		print_debug("При нажатии раз ", get_tree().paused)
+	if Input.is_action_just_pressed("exit") and visible == false:
 		pause()
-	elif Input.is_action_just_pressed("exit") and get_tree().paused == true:
-		print_debug("При нажатии два ", get_tree().paused)
+	elif Input.is_action_just_pressed("exit") and visible == true:	
 		resume()
 
 func _on_resume_pressed():
