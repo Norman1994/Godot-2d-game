@@ -8,12 +8,20 @@ var has_key : bool = false
 var has_double_jump : bool = false
 var can_double_jump : bool = false
 var is_hit: bool = false
+var position_load : bool = false
 
 func _ready() -> void:
 	animated_sprite_2d.play("Idle")
-	#GlobalVars.current_player = self
+	GlobalVars.current_player = self
 
 func _physics_process(delta: float) -> void:	
+	if not position_load and GlobalVars.position_load and GlobalVars.current_player_position != null:
+		print_debug("Игрок стоит в ", GlobalVars.current_player_position)	
+		position = GlobalVars.current_player_position
+		position_load = true
+		GlobalVars.position_load = false
+		print_debug("Позиция игрока установлена из GlobalVars:", position)
+		
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

@@ -5,7 +5,10 @@ func _ready():
 	get_tree().paused = false
 	
 func resume():
-	get_tree().paused = false
+	if get_tree() == null:
+		await Engine.get_main_loop().process_frame
+	if get_tree() != null:
+		get_tree().paused = false
 	visible = false
 	
 func pause():
