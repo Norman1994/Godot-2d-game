@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://d03laefjolx6u"]
+[gd_scene load_steps=12 format=3 uid="uid://d03laefjolx6u"]
 
 [ext_resource type="PackedScene" uid="uid://v2oh70f8wh7x" path="res://Player/player.tscn" id="1_3m1hs"]
+[ext_resource type="Script" uid="uid://clpq16sakx4le" path="res://Levels/world_2.gd" id="1_avvdp"]
 [ext_resource type="Texture2D" uid="uid://c7kfcwwhac608" path="res://res/Terrain/Terrain (16x16).png" id="2_ia432"]
 [ext_resource type="PackedScene" uid="uid://brstw5i47h70v" path="res://ExitDoor/exit_door.tscn" id="3_ia432"]
 [ext_resource type="PackedScene" uid="uid://dnr7j53liu52r" path="res://Menus/in_game_interface.tscn" id="4_xrwc4"]
@@ -284,6 +285,7 @@ physics_layer_0/collision_mask = 16
 sources/0 = SubResource("TileSetAtlasSource_hlada")
 
 [node name="World2" type="Node2D"]
+script = ExtResource("1_avvdp")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_fu0tf")

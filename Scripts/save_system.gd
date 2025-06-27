@@ -43,7 +43,7 @@ func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(save_data))
 	file.close()
-	print_debug(save_data)
+	print_debug("Сохранение выполнено!")
 	
 func load_game():
 	if not FileAccess.file_exists(SAVE_PATH):
